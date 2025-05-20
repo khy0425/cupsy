@@ -1,0 +1,112 @@
+# Cupsy 앱 데이터 요구사항
+
+Cupsy 앱은 사용자의 감정과 상황을 기반으로 음료(컵)를 시각화하는 앱입니다. 
+다음은 앱 구현에 필요한 데이터 구조 및 매개변수들입니다.
+
+## 1. 감정 데이터 (Emotion)
+
+감정은 다음 속성을 포함해야 합니다:
+
+```
+{
+  "id": "감정 고유 식별자 (예: joy, calm, anger)",
+  "name": "감정 이름 (예: 기쁨, 평온, 화남)",
+  "description": "감정에 대한 설명",
+  "colorName": "감정과 연관된 색상 키 (AppTheme.emotionColors에 정의된 키)",
+  "intensity": "강도 (1-10)"
+}
+```
+
+기본 감정 목록:
+- 기쁨 (joy)
+- 평온함 (calm)
+- 슬픔 (sadness)
+- 화남 (anger)
+- 불안 (anxiety)
+- 사랑 (love)
+- 지루함 (boredom)
+- 흥분 (excitement)
+- 희망 (hope)
+- 놀람 (surprise)
+
+## 2. 상황 데이터 (Situation)
+
+상황은 다음 속성을 포함해야 합니다:
+
+```
+{
+  "id": "상황 고유 식별자 (예: work, social, health)",
+  "name": "상황 이름 (예: 일, 사회적 관계, 건강)",
+  "description": "상황에 대한 설명",
+  "icon": "상황을 나타내는 아이콘 식별자 (예: work, social)"
+}
+```
+
+기본 상황 목록:
+- 일/업무 (work)
+- 사회적 관계 (social)
+- 건강 (health)
+- 가정 (home)
+- 취미/여가 (leisure)
+- 여행 (travel)
+- 재정/금전 (financial)
+- 기타 (other)
+
+## 3. 감정 음료 생성 매개변수
+
+감정 음료 시각화에 필요한 매개변수:
+
+```
+{
+  "cupStyle": "컵 스타일 (1: 일반 컵, 2: 머그컵, 3: 와인 글라스)",
+  "liquidColor": "음료 색상 (Color)",
+  "liquidOpacity": "음료 투명도 (0.0-1.0)",
+  "foamHeight": "거품 높이 비율 (0.0-0.3)",
+  "foamColor": "거품 색상 (Color)",
+  "liquidLevel": "음료 높이 비율 (0.3-0.9)",
+  "hasBubbles": "기포 유무 (true/false)",
+  "hasIce": "얼음 유무 (true/false)",
+  "hasSplash": "흘림 효과 유무 (true/false)",
+  "hasDrip": "방울 효과 유무 (true/false)",
+  "hasStraw": "빨대 유무 (true/false)",
+  "hasSmoke": "연기/김 효과 유무 (true/false)",
+  "decorations": "장식물 목록 (체리, 레몬, 민트 등)"
+}
+```
+
+## 4. 컵 생성 결과 (EmotionCup)
+
+생성된 감정 음료 데이터:
+
+```
+{
+  "id": "고유 ID",
+  "emotion": "감정 객체",
+  "situation": "상황 객체",
+  "createdAt": "생성 날짜/시간",
+  "title": "감정 음료 이름",
+  "description": "감정 음료 설명"
+}
+```
+
+## 5. 시스템 제한 사항
+
+- 하루에 최대 1개의 감정 컵만 생성 가능
+- 생성된 감정 컵은 로컬 저장소에 저장
+- 생성 일시 24시간 후 또는 자정 이후 다시 생성 가능
+
+## 6. 필요한 이미지 리소스
+
+- 앱 아이콘
+- 스플래시 스크린 이미지
+- 장식 요소 (체리, 레몬, 민트, 빨대 등) 이미지
+
+## 7. 필요한 패키지
+
+- flutter_riverpod: 상태 관리
+- shared_preferences: 로컬 데이터 저장
+- go_router: 네비게이션
+- screenshot: 이미지 캡쳐
+- image_gallery_saver: 이미지 저장
+- share_plus: 공유 기능
+- permission_handler: 권한 관리 

@@ -1,0 +1,14 @@
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21 # Android minSdkVersion
+  adaptive_icon_background: "#FFFFFF" # Android 적응형 아이콘 배경색
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png" # Android 적응형 아이콘 전경
+  remove_alpha_ios: true # iOS 아이콘에서 알파 채널 제거
+  web:
+    generate: false # 웹 아이콘 비활성화
+  windows:
+    generate: false # Windows 아이콘 비활성화
+  macos:
+    generate: false # macOS 아이콘 비활성화 

@@ -1,0 +1,30 @@
+flutter_native_splash:
+  # 스플래시 화면 배경색
+  color: "#FFFFFF"
+  # 또는 배경 이미지 사용
+  # background_image: "assets/splash/background.png"
+  
+  # 스플래시 이미지
+  image: assets/splash/splash_logo.png
+
+  # 다크 모드 설정 (선택사항)
+  color_dark: "#121212"
+  # background_image_dark: "assets/splash/dark-background.png"
+  image_dark: assets/splash/splash_logo_dark.png
+
+  # 안드로이드 12 설정
+  android_12:
+    # 안드로이드 12에서 사용할 이미지
+    image: assets/splash/splash_logo_android12.png
+    icon_background_color: "#FFFFFF"
+    image_dark: assets/splash/splash_logo_dark_android12.png
+    icon_background_color_dark: "#121212"
+
+  # 웹 설정은 비활성화
+  web: false
+  
+  # 스플래시 화면 지속 시간 설정 (선택사항)
+  # android_screen_orientation: portrait
+  # flutter_android_notification_icon: "assets/notification_icon.png"
+  # ios_content_mode: center
+  # ios_screen_orientation: portrait 
