@@ -87,7 +87,7 @@ MIT 라이센스로 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파�
 
 ## 📧 문의하기 (Contact)
 
-프로젝트 관련 문의사항은 이메일 [email@example.com](mailto:email@example.com)로 보내주세요.
+프로젝트 관련 문의사항은 이메일 [osu355@gmail.com](mailto:osu355@gmail.com)로 보내주세요.
 
 ---
 
